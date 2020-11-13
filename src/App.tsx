@@ -6,7 +6,7 @@ import WaveFilePage from 'pages/WaveFile'
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='mmd-3-fiber'>
       <Switch>
         <Route exact path='/' component={WaveFilePage} />
         <Route exact path='/standing' component={StandingPage} />
