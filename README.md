@@ -1,3 +1,13 @@
+## HARE HARE YUKAI
+### 3D animation with react-three-fiber and MMD
+
+### Getting started
+```
+  yarn
+  yarn start
+```
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
