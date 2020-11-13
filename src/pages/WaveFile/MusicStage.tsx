@@ -3,10 +3,10 @@ import {
   CircleBufferGeometry,
   Color,
   FrontSide,
-  Mesh,
-  PlaneBufferGeometry,
   SphereBufferGeometry,
-  Vector3,
+  // Mesh,
+  // PlaneBufferGeometry,
+  // Vector3,
 } from 'three'
 
 const MusicStage = () => {
@@ -56,75 +56,75 @@ const MusicStageGround = () => {
     </>
   )
 }
-const Monitor = (props: any) => {
-  const edge = React.useRef<Mesh>()
-  React.useEffect(() => {
-    if(edge.current) {
-      edge.current.position.z -= 0.01
-    }
-  }, [])
+// const Monitor = (props: any) => {
+//   const edge = React.useRef<Mesh>()
+//   React.useEffect(() => {
+//     if(edge.current) {
+//       edge.current.position.z -= 0.01
+//     }
+//   }, [])
 
-  // const { gl, scene, camera } = useThree()
-  // const [composer2, setComposer2] = React.useState<EffectComposer>()
-  // React.useEffect(() => {
-    // const effect = new OutlineEffect(gl, {})
+//   // const { gl, scene, camera } = useThree()
+//   // const [composer2, setComposer2] = React.useState<EffectComposer>()
+//   // React.useEffect(() => {
+//     // const effect = new OutlineEffect(gl, {})
 
-    // const bloomPass = new UnrealBloomPass(
-    //   new Vector2(window.innerWidth, window.innerHeight),
-    //   1.0,
-    //   0.7,
-    //   0.1
-    // )
-    // const copyPass = new ShaderPass(CopyShader)
-    // copyPass.renderToScreen = true
-    // const composer = new EffectComposer(gl)
-    // composer.setSize(window.innerWidth, window.innerHeight)
-    // composer.addPass(bloomPass)
-    // composer.addPass(copyPass)
+//     // const bloomPass = new UnrealBloomPass(
+//     //   new Vector2(window.innerWidth, window.innerHeight),
+//     //   1.0,
+//     //   0.7,
+//     //   0.1
+//     // )
+//     // const copyPass = new ShaderPass(CopyShader)
+//     // copyPass.renderToScreen = true
+//     // const composer = new EffectComposer(gl)
+//     // composer.setSize(window.innerWidth, window.innerHeight)
+//     // composer.addPass(bloomPass)
+//     // composer.addPass(copyPass)
 
-    // const copyPass2 = new ShaderPass(CopyShader)
-    // const composer2 = new EffectComposer(gl)
-    // composer2.readBuffer = composer.readBuffer
-    // composer2.setSize(window.innerWidth, window.innerHeight)
-    // composer2.addPass(copyPass2)
-    // setComposer2(composer2)
-  // }, [])
+//     // const copyPass2 = new ShaderPass(CopyShader)
+//     // const composer2 = new EffectComposer(gl)
+//     // composer2.readBuffer = composer.readBuffer
+//     // composer2.setSize(window.innerWidth, window.innerHeight)
+//     // composer2.addPass(copyPass2)
+//     // setComposer2(composer2)
+//   // }, [])
 
-  // useFrame(() => {
-    // effect.render(scene, camera)
-    // gl.render(scene, camera)
-    // composer2?.render()
-    // composer.render()
-  // })
+//   // useFrame(() => {
+//     // effect.render(scene, camera)
+//     // gl.render(scene, camera)
+//     // composer2?.render()
+//     // composer.render()
+//   // })
 
-  return (
-    <>
-      <mesh
-        geometry={new PlaneBufferGeometry(100, 40)}
-        {...props}
-      >
-        {/* <shaderMaterial
-          attach='material'
-          uniforms={{
-            strength: { value: 0.20 },
-            // tDiffuse: { value: composer2?.writeBuffer.texture }
-          }}
-          vertexShader=''
-          fragmentShader=''
-        /> */}
-      </mesh>
+//   return (
+//     <>
+//       <mesh
+//         geometry={new PlaneBufferGeometry(100, 40)}
+//         {...props}
+//       >
+//         {/* <shaderMaterial
+//           attach='material'
+//           uniforms={{
+//             strength: { value: 0.20 },
+//             // tDiffuse: { value: composer2?.writeBuffer.texture }
+//           }}
+//           vertexShader=''
+//           fragmentShader=''
+//         /> */}
+//       </mesh>
       
-      <mesh
-        geometry={new PlaneBufferGeometry(100, 40)}
-        ref={edge}
-        scale={new Vector3(1, 1, 1).multiplyScalar(1.01)}
-        {...props}
-      >
-        <meshBasicMaterial
-          attach='material'
-          color={new Color(0xffffff)}
-        />
-      </mesh>
-    </>
-  )
-}
+//       <mesh
+//         geometry={new PlaneBufferGeometry(100, 40)}
+//         ref={edge}
+//         scale={new Vector3(1, 1, 1).multiplyScalar(1.01)}
+//         {...props}
+//       >
+//         <meshBasicMaterial
+//           attach='material'
+//           color={new Color(0xffffff)}
+//         />
+//       </mesh>
+//     </>
+//   )
+// }

@@ -72,6 +72,7 @@ const Miku = () => {
       }
       start()
     }
+    // eslint-disable-next-line
   }, [model.visible])
 
   useFrame((_, delta) => {
@@ -101,11 +102,11 @@ const loadAudio = (url: string): Promise<{audio: Audio<GainNode>, listener: Audi
   })
 }
 
-const loadPose = (loader: MMDLoader, poseUrl: string): Promise<object> => {
-  return new Promise(resolve => {
-    loader.loadVPD(poseUrl, true, pose => {
-      resolve(pose)
-    })
-  })
-}
+// const loadPose = (loader: MMDLoader, poseUrl: string): Promise<object> => {
+//   return new Promise(resolve => {
+//     loader.loadVPD(poseUrl, true, pose => {
+//       resolve(pose)
+//     })
+//   })
+// }
 
