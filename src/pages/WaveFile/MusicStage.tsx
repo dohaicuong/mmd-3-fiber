@@ -1,5 +1,4 @@
 import React from 'react'
-import { useFrame, useThree } from 'react-three-fiber'
 import {
   CircleBufferGeometry,
   Color,
@@ -7,15 +6,8 @@ import {
   Mesh,
   PlaneBufferGeometry,
   SphereBufferGeometry,
-  Vector2,
   Vector3,
 } from 'three'
-import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer'
-import { ShaderPass } from 'three/examples/jsm/postprocessing/ShaderPass'
-import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass'
-import { CopyShader } from 'three/examples/jsm/shaders/CopyShader'
-import { OutlineEffect } from 'three/examples/jsm/effects/OutlineEffect'
-import { Effects } from '@react-three/drei'
 
 const MusicStage = () => {
   return (

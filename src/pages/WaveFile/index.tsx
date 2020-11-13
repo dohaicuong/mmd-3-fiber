@@ -1,17 +1,13 @@
 import React from 'react'
 import { Canvas, useFrame, useLoader, useThree } from 'react-three-fiber'
-import { Stars, OrbitControls } from '@react-three/drei'
 import MusicLight from './MusicLight'
 import MusicStage from './MusicStage'
 import MusicCamera from './MusicCamera'
-import Beams from './Beams'
-import { EffectComposer, DepthOfField, Bloom, Noise, Vignette, SelectiveBloom } from '@react-three/postprocessing'
 
 import { MMDLoader } from 'three/examples/jsm/loaders/MMDLoader'
 import { MMDAnimationHelper } from 'three/examples/jsm/animation/MMDAnimationHelper'
 import { loadAnimation } from 'utils/loadAnimation'
 import { Audio, AudioListener, AudioLoader } from 'three'
-
 
 const WaveFilePage = () => {
   return (
